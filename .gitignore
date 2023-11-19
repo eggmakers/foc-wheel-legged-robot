@@ -1,0 +1,6 @@
+*.14024
+
+stm32-foc/software/.vscode/
+
+stm32-foc/software/MDK-ARM/C6T6SimpleFoc/
+
