@@ -5,10 +5,10 @@
 
 #include "FOCMotor.h"
 #include "BLDCmotor.h"
-#include "MagneticSensor.h" 
+#include "MagneticSensor.h"
 
 /******************************************************************************/
-float shaft_angle;//!< current motor angle
+float shaft_angle; //!< current motor angle
 float electrical_angle;
 float shaft_velocity;
 float current_sp;
@@ -20,15 +20,15 @@ DQCurrent_s current;
 TorqueControlType torque_controller;
 MotionControlType controller;
 
-float sensor_offset=0;
+float sensor_offset = 0;
 float zero_electric_angle;
 /******************************************************************************/
 // shaft angle calculation
 float shaftAngle(void)
 {
   // if no sensor linked return previous value ( for open loop )
-  //if(!sensor) return shaft_angle;
-  return sensor_direction*getAngle() - sensor_offset;
+  // if(!sensor) return shaft_angle;
+  return sensor_direction * getAngle() - sensor_offset;
 }
 /******************************************************************************/
 float electricalAngle(void)
@@ -36,5 +36,3 @@ float electricalAngle(void)
   return _normalizeAngle((shaft_angle + sensor_offset) * pole_pairs - zero_electric_angle);
 }
 /******************************************************************************/
-
-

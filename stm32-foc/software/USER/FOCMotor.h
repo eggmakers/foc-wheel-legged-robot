@@ -1,16 +1,16 @@
 #ifndef FOCMOTOR_H
 #define FOCMOTOR_H
 
-#include "foc_utils.h" 
+#include "foc_utils.h"
 /******************************************************************************/
 /**
  *  Motiron control type
  */
 typedef enum
 {
-	Type_torque,//!< Torque control
-	Type_velocity,//!< Velocity motion control
-	Type_angle,//!< Position/angle motion control
+	Type_torque,   //!< Torque control
+	Type_velocity, //!< Velocity motion control
+	Type_angle,	   //!< Position/angle motion control
 	Type_velocity_openloop,
 	Type_angle_openloop
 } MotionControlType;
@@ -20,7 +20,7 @@ typedef enum
  */
 typedef enum
 {
-	Type_voltage, //!< Torque control using voltage
+	Type_voltage,	 //!< Torque control using voltage
 	Type_dc_current, //!< Torque control using DC current (one current magnitude)
 	Type_foc_current //!< torque control using dq currents
 } TorqueControlType;
@@ -28,7 +28,7 @@ typedef enum
 extern TorqueControlType torque_controller;
 extern MotionControlType controller;
 /******************************************************************************/
-extern float shaft_angle;//!< current motor angle
+extern float shaft_angle; //!< current motor angle
 extern float electrical_angle;
 extern float shaft_velocity;
 extern float current_sp;
@@ -45,4 +45,3 @@ float electricalAngle(void);
 /******************************************************************************/
 
 #endif
-

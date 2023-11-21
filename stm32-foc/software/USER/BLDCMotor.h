@@ -7,9 +7,9 @@
  */
 typedef enum
 {
-    CW      = 1,  //clockwise
-    CCW     = -1, // counter clockwise
-    UNKNOWN = 0   //not yet known or invalid state
+    CW = 1,     // clockwise
+    CCW = -1,   // counter clockwise
+    UNKNOWN = 0 // not yet known or invalid state
 } Direction;
 
 /******************************************************************************/
@@ -17,7 +17,7 @@ extern long sensor_direction;
 extern float voltage_power_supply;
 extern float voltage_limit;
 extern float voltage_sensor_align;
-extern int  pole_pairs;
+extern int pole_pairs;
 extern unsigned long open_loop_timestamp;
 extern float velocity_limit;
 /******************************************************************************/

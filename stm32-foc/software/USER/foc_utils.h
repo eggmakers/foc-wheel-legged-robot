@@ -5,11 +5,11 @@
 
 /******************************************************************************/
 // sign function
-#define _sign(a) ( ( (a) < 0 )  ?  -1   : ( (a) > 0 ) )
-#define _round(x) ((x)>=0?(long)((x)+0.5):(long)((x)-0.5))
-#define _constrain(amt,low,high) ((amt)<(low)?(low):((amt)>(high)?(high):(amt)))
+#define _sign(a) (((a) < 0) ? -1 : ((a) > 0))
+#define _round(x) ((x) >= 0 ? (long)((x) + 0.5) : (long)((x)-0.5))
+#define _constrain(amt, low, high) ((amt) < (low) ? (low) : ((amt) > (high) ? (high) : (amt)))
 #define _sqrt(a) (_sqrtApprox(a))
-#define _isset(a) ( (a) != (NOT_SET) )
+#define _isset(a) ((a) != (NOT_SET))
 
 // utility defines
 #define _2_SQRT3 1.15470053838
@@ -25,21 +25,21 @@
 #define _3PI_2 4.71238898038
 #define _PI_6 0.52359877559
 /******************************************************************************/
-// dq current structure 
-typedef struct 
+// dq current structure
+typedef struct
 {
 	float d;
 	float q;
 } DQCurrent_s;
-// phase current structure 
-typedef struct 
+// phase current structure
+typedef struct
 {
 	float a;
 	float b;
 	float c;
 } PhaseCurrent_s;
 // dq voltage structs
-typedef struct 
+typedef struct
 {
 	float d;
 	float q;
@@ -52,6 +52,4 @@ float _electricalAngle(float shaft_angle, int pole_pairs);
 float _sqrtApprox(float number);
 /******************************************************************************/
 
-
 #endif
-
